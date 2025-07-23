@@ -5,53 +5,191 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>TR Design by Tess Romano</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #fffaf4;
-      color: #333;
-      max-width: 700px;
-      margin: 40px auto;
-      padding: 20px;
-      text-align: center;
+    /* Reset & base */
+    * {
+      box-sizing: border-box;
     }
-    header {
-      background-color: #ffe6ec;
-      padding: 20px;
-      border-radius: 10px;
-      margin-bottom: 30px;
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fffaf4;
+      color: #333;
+      line-height: 1.6;
     }
     a {
       color: #d14b6c;
-      font-weight: bold;
       text-decoration: none;
+      font-weight: 600;
     }
-    img {
-      max-width: 100%;
-      height: auto;
-      margin: 10px 0;
-      border-radius: 8px;
+    a:hover {
+      text-decoration: underline;
     }
-    section {
+
+    /* Container */
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    /* Header */
+    header {
+      background: #ffe6ec;
+      padding: 30px 20px;
+      border-radius: 12px;
+      text-align: center;
       margin-bottom: 40px;
+      box-shadow: 0 4px 6px rgba(209, 75, 108, 0.2);
+    }
+    header h1 {
+      margin: 0 0 10px;
+      font-size: 2.8rem;
+      color: #b03556;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin: 0 0 15px;
+    }
+    header .instagram-link {
+      display: inline-block;
+      background: #b03556;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    header .instagram-link:hover {
+      background: #d14b6c;
+    }
+
+    /* About Section */
+    #about {
+      margin-bottom: 50px;
+    }
+    #about h2 {
+      font-size: 2rem;
+      color: #b03556;
+      margin-bottom: 15px;
+      border-bottom: 3px solid #d14b6c;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+    #about p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    /* Gallery */
+    #gallery {
+      margin-bottom: 50px;
+    }
+    #gallery h2 {
+      font-size: 2rem;
+      color: #b03556;
+      margin-bottom: 25px;
+      border-bottom: 3px solid #d14b6c;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .gallery-grid img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 6px 10px rgba(209, 75, 108, 0.15);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .gallery-grid img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 15px rgba(209, 75, 108, 0.3);
+    }
+
+    /* Contact Section */
+    #contact {
+      background: #ffe6ec;
+      padding: 30px 20px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(209, 75, 108, 0.2);
+    }
+    #contact h2 {
+      font-size: 2rem;
+      color: #b03556;
+      margin-bottom: 15px;
+    }
+    #contact p {
+      font-size: 1.1rem;
+      margin: 10px 0;
+    }
+    #contact a.email-link {
+      color: #b03556;
+      font-weight: bold;
+      word-break: break-all;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+      color: #888;
+      margin-top: 40px;
+      user-select: none;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 500px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      #about h2,
+      #gallery h2,
+      #contact h2 {
+        font-size: 1.5rem;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>TR Design by Tess Romano</h1>
-    <p>Custom decorations, gifts, and creative crafts for parties and events.</p>
-    <p><a href="https://www.instagram.com/YOURINSTAGRAM" target="_blank">Follow me on Instagram</a></p>
-  </header>
+  <div class="container">
+    <header>
+      <h1>TR Design by Tess Romano</h1>
+      <p>Custom decorations, gifts, and creative crafts for parties and events.</p>
+      <a href="https://www.instagram.com/YOURINSTAGRAM" target="_blank" class="instagram-link" rel="noopener noreferrer">Follow me on Instagram</a>
+    </header>
 
-  <section>
-    <h2>Gallery</h2>
-    <img src="https://via.placeholder.com/600x400?text=Example+Art+1" alt="Example art 1" />
-    <img src="https://via.placeholder.com/600x400?text=Example+Art+2" alt="Example art 2" />
-  </section>
+    <section id="about">
+      <h2>About Tess</h2>
+      <p>
+        Hi! I'm Tess Romano, the creative force behind TR Design. I specialize in crafting unique handmade decorations and gifts tailored to your special occasions. From birthday parties to weddings, I’m here to bring your vision to life with custom, one-of-a-kind creations.
+      </p>
+    </section>
 
-  <section>
-    <h2>Contact</h2>
-    <p>Email: yourname@example.com</p>
-  </section>
+    <section id="gallery">
+      <h2>Gallery</h2>
+      <div class="gallery-grid">
+        <img src="https://via.placeholder.com/600x400?text=Art+Piece+1" alt="Art Piece 1" />
+        <img src="https://via.placeholder.com/600x400?text=Art+Piece+2" alt="Art Piece 2" />
+        <img src="https://via.placeholder.com/600x400?text=Art+Piece+3" alt="Art Piece 3" />
+        <img src="https://via.placeholder.com/600x400?text=Art+Piece+4" alt="Art Piece 4" />
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Got a custom request or question? Reach out!</p>
+      <p>Email: <a href="mailto:yourname@example.com" class="email-link">yourname@example.com</a></p>
+    </section>
+
+    <footer>
+      &copy; 2025 TR Design by Tess Romano. All rights reserved.
+    </footer>
+  </div>
 </body>
 </html>
