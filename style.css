@@ -1,0 +1,141 @@
+body {
+  font-family: 'Quicksand', Arial, sans-serif;
+  background: #fffafc;
+  color: #444;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: linear-gradient(120deg, #ffe0ec 0%, #e0f7fa 100%);
+  text-align: center;
+  padding: 2rem 1rem 1rem 1rem;
+}
+
+header h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.5rem;
+  margin: 0 0 0.5rem 0;
+  color: #ff7eb9;
+}
+
+header .highlight {
+  color: #7afcff;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+section {
+  margin-bottom: 2.5rem;
+}
+
+h2 {
+  font-family: 'Pacifico', cursive;
+  color: #f7b267;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.2rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 18px;
+  box-shadow: 0 4px 16px rgba(255, 126, 185, 0.12);
+  background: #fff;
+  transition: transform 0.2s;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.04) rotate(-2deg);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  background: #e0f7fa;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(122, 252, 255, 0.08);
+  max-width: 400px;
+  margin-bottom: 1rem;
+}
+
+label {
+  font-weight: bold;
+  color: #ff7eb9;
+}
+
+input, textarea {
+  font-family: inherit;
+  padding: 0.5rem;
+  border: 1px solid #ffd6e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #fff;
+}
+
+button[type="submit"] {
+  background: #f7b267;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.2rem;
+  font-family: 'Pacifico', cursive;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button[type="submit"]:hover {
+  background: #ff7eb9;
+}
+
+#contact a {
+  color: #7afcff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  padding: 1.2rem 0;
+  background: #ffe0ec;
+  color: #bdbdbd;
+  font-size: 1rem;
+  margin-top: 2rem;
+  border-top: 1px solid #ffd6e0;
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.7rem;
+  }
+  h2 {
+    font-size: 1.3rem;
+  }
+  main {
+    padding: 0 0.3rem;
+  }
+  form {
+    padding: 1rem;
+  }
+} 
