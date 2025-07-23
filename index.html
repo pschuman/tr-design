@@ -1,195 +1,265 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>TR Design by Tess Romano</title>
+  <title>TR Design by Tess Romano — Next Level Art & Craft</title>
   <style>
-    /* Reset & base */
+    /* Reset */
     * {
-      box-sizing: border-box;
+      margin: 0; padding: 0; box-sizing: border-box;
     }
+
+    /* Fonts & base */
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto:wght@400;700&display=swap');
+
     body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #fffaf4;
-      color: #333;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      color: #eee;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 40px 20px;
+      overflow-x: hidden;
+    }
+
+    h1, h2 {
+      font-family: 'Orbitron', sans-serif;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #00fff7;
+      text-shadow: 0 0 10px #00fff7, 0 0 20px #00fff7;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #00fff7;
+      width: max-content;
+      padding-bottom: 6px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    p {
+      font-size: 1.15rem;
       line-height: 1.6;
+      max-width: 700px;
+      color: #ccc;
+      margin-bottom: 20px;
+      text-align: center;
+      text-shadow: 0 0 2px #0008;
     }
+
     a {
-      color: #d14b6c;
+      color: #00fff7;
+      font-weight: 700;
       text-decoration: none;
-      font-weight: 600;
+      transition: color 0.3s ease;
     }
+
     a:hover {
-      text-decoration: underline;
+      color: #00b6b2;
+      text-shadow: 0 0 10px #00b6b2;
     }
 
     /* Container */
     .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 20px;
+      width: 100%;
+      max-width: 960px;
+      background: rgba(10,10,30,0.9);
+      padding: 40px 30px 50px;
+      border-radius: 20px;
+      box-shadow:
+        0 0 15px 3px #00fff7aa,
+        inset 0 0 20px #00fff7cc;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
     }
 
     /* Header */
     header {
-      background: #ffe6ec;
-      padding: 30px 20px;
-      border-radius: 12px;
       text-align: center;
-      margin-bottom: 40px;
-      box-shadow: 0 4px 6px rgba(209, 75, 108, 0.2);
-    }
-    header h1 {
-      margin: 0 0 10px;
-      font-size: 2.8rem;
-      color: #b03556;
-    }
-    header p {
-      font-size: 1.2rem;
-      margin: 0 0 15px;
-    }
-    header .instagram-link {
-      display: inline-block;
-      background: #b03556;
-      color: white;
-      padding: 12px 25px;
-      border-radius: 30px;
-      font-weight: bold;
-      transition: background 0.3s ease;
-    }
-    header .instagram-link:hover {
-      background: #d14b6c;
     }
 
-    /* About Section */
-    #about {
-      margin-bottom: 50px;
-    }
-    #about h2 {
-      font-size: 2rem;
-      color: #b03556;
-      margin-bottom: 15px;
-      border-bottom: 3px solid #d14b6c;
+    /* Instagram Button */
+    .instagram-btn {
       display: inline-block;
-      padding-bottom: 5px;
+      background: #00fff7;
+      color: #001f27;
+      padding: 14px 40px;
+      margin-top: 10px;
+      font-weight: 700;
+      font-family: 'Orbitron', sans-serif;
+      border-radius: 35px;
+      box-shadow: 0 0 15px #00fff7cc;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      cursor: pointer;
+      transition:
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+      user-select: none;
     }
+
+    .instagram-btn:hover {
+      box-shadow:
+        0 0 25px 5px #00fff7ff,
+        0 0 40px 8px #00fff7aa;
+      transform: scale(1.1) rotate(2deg);
+    }
+
+    /* Sections */
+    section {
+      width: 100%;
+      max-width: 900px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* About */
     #about p {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       max-width: 700px;
-      margin: auto;
+      color: #a5f1f0;
+      text-shadow: 0 0 4px #00fff7aa;
     }
 
     /* Gallery */
     #gallery {
-      margin-bottom: 50px;
-    }
-    #gallery h2 {
-      font-size: 2rem;
-      color: #b03556;
-      margin-bottom: 25px;
-      border-bottom: 3px solid #d14b6c;
-      display: inline-block;
-      padding-bottom: 5px;
-    }
-    .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
-    .gallery-grid img {
-      width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 6px 10px rgba(209, 75, 108, 0.15);
-      transition: transform 0.3s ease;
-      cursor: pointer;
-    }
-    .gallery-grid img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 10px 15px rgba(209, 75, 108, 0.3);
+      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+      gap: 25px;
+      padding: 0 10px;
     }
 
-    /* Contact Section */
-    #contact {
-      background: #ffe6ec;
-      padding: 30px 20px;
-      border-radius: 12px;
-      text-align: center;
-      box-shadow: 0 4px 6px rgba(209, 75, 108, 0.2);
+    #gallery img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow:
+        0 0 10px #00fff7cc,
+        inset 0 0 15px #00fff7aa;
+      cursor: pointer;
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+      filter: drop-shadow(0 0 0.2rem #00fff7bb);
     }
-    #contact h2 {
-      font-size: 2rem;
-      color: #b03556;
-      margin-bottom: 15px;
+
+    #gallery img:hover {
+      transform: scale(1.08);
+      box-shadow:
+        0 0 25px #00fff7ff,
+        0 0 50px #00fff7bb,
+        inset 0 0 30px #00fff7ff;
+      filter: drop-shadow(0 0 0.4rem #00fff7ee);
+      z-index: 2;
+      position: relative;
     }
-    #contact p {
-      font-size: 1.1rem;
-      margin: 10px 0;
+
+    /* Contact */
+    #contact p, #contact a {
+      font-size: 1.15rem;
+      color: #a5f1f0;
+      text-shadow: 0 0 4px #00fff7aa;
     }
+
     #contact a.email-link {
-      color: #b03556;
-      font-weight: bold;
-      word-break: break-all;
+      font-weight: 700;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.3s ease;
+    }
+
+    #contact a.email-link:hover {
+      border-color: #00fff7;
+    }
+
+    /* Contact button pulse */
+    .contact-btn {
+      margin-top: 15px;
+      background: #00fff7;
+      color: #001f27;
+      border: none;
+      border-radius: 40px;
+      padding: 14px 50px;
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      cursor: pointer;
+      box-shadow: 0 0 30px #00fff7cc;
+      animation: pulse 2.5s infinite ease-in-out;
+      transition: box-shadow 0.3s ease;
+      user-select: none;
+    }
+    .contact-btn:hover {
+      box-shadow:
+        0 0 50px 12px #00fff7ff,
+        0 0 80px 20px #00fff7aa;
+      transform: scale(1.05);
+    }
+    @keyframes pulse {
+      0%, 100% {
+        box-shadow: 0 0 30px #00fff7cc;
+      }
+      50% {
+        box-shadow: 0 0 50px 15px #00fff7ff;
+      }
     }
 
     /* Footer */
     footer {
-      text-align: center;
-      padding: 15px;
+      margin-top: 50px;
       font-size: 0.9rem;
-      color: #888;
-      margin-top: 40px;
+      color: #444;
+      text-shadow: none;
       user-select: none;
     }
 
-    /* Responsive tweaks */
-    @media (max-width: 500px) {
-      header h1 {
-        font-size: 2rem;
+    /* Responsive */
+    @media (max-width: 520px) {
+      h1 {
+        font-size: 2.4rem;
       }
-      #about h2,
-      #gallery h2,
-      #contact h2 {
-        font-size: 1.5rem;
+      h2 {
+        font-size: 1.6rem;
+      }
+      #gallery {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+      .instagram-btn, .contact-btn {
+        padding: 12px 30px;
+        font-size: 1rem;
       }
     }
   </style>
 </head>
 <body>
-  <div class="container">
+  <div class="container" role="main">
     <header>
-      <h1>TR Design by Tess Romano</h1>
-      <p>Custom decorations, gifts, and creative crafts for parties and events.</p>
-      <a href="https://www.instagram.com/YOURINSTAGRAM" target="_blank" class="instagram-link" rel="noopener noreferrer">Follow me on Instagram</a>
+      <h1>TR Design</h1>
+      <p>By Tess Romano — Next Level Art & Craft</p>
+      <a href="https://www.instagram.com/YOURINSTAGRAM" target="_blank" rel="noopener noreferrer" class="instagram-btn" aria-label="Visit TR Design Instagram">Follow on Instagram</a>
     </header>
 
-    <section id="about">
-      <h2>About Tess</h2>
+    <section id="about" aria-labelledby="about-title">
+      <h2 id="about-title">About Tess</h2>
       <p>
-        Hi! I'm Tess Romano, the creative force behind TR Design. I specialize in crafting unique handmade decorations and gifts tailored to your special occasions. From birthday parties to weddings, I’m here to bring your vision to life with custom, one-of-a-kind creations.
+        Hi, I’m Tess Romano, the visionary behind TR Design. I craft mind-blowing, custom decorations and gifts for all your special occasions — parties, weddings, or whatever wild idea you have. Let’s make something unforgettable together.
       </p>
     </section>
 
-    <section id="gallery">
+    <section id="gallery" aria-label="Gallery of artwork">
       <h2>Gallery</h2>
-      <div class="gallery-grid">
-        <img src="https://via.placeholder.com/600x400?text=Art+Piece+1" alt="Art Piece 1" />
-        <img src="https://via.placeholder.com/600x400?text=Art+Piece+2" alt="Art Piece 2" />
-        <img src="https://via.placeholder.com/600x400?text=Art+Piece+3" alt="Art Piece 3" />
-        <img src="https://via.placeholder.com/600x400?text=Art+Piece+4" alt="Art Piece 4" />
-      </div>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Got a custom request or question? Reach out!</p>
-      <p>Email: <a href="mailto:yourname@example.com" class="email-link">yourname@example.com</a></p>
-    </section>
-
-    <footer>
-      &copy; 2025 TR Design by Tess Romano. All rights reserved.
-    </footer>
-  </div>
-</body>
-</html>
+      <img src="https://via.placeholder.com/600x400/00fff7/001f27?text=Custom+Art+1" alt="Custom art piece 1" />
+      <img src="https://via.placeholder.com/600x400/00fff7/001f27?text=Custom+Art+2" alt="Custom art piece 2" />
+      <img src="https://via.placeholder.com/600x400/00fff7/001f27?text=Custom+Art+
